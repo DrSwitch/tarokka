@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  $('#guess').click(function(){
+  $('#guess').click(function() {
 
     function randomCards(arr, n) {
-      var i, j, temp;
+      let i, j, temp;
       for (i=0; i<arr.length; i++) {
         j = Math.floor(Math.random() * i);
         temp = arr[i];
@@ -12,22 +12,23 @@ $(document).ready(function() {
       return arr.slice(0, n);
     };
 
-    var senior_cards = randomCards(tarokka.seniordeck, 2);
-    var junior_cards = randomCards(tarokka.juniordeck, 3);
+    let senior_cards = randomCards(tarokka.seniordeck, 2);
+    let junior_cards = randomCards(tarokka.juniordeck, 3);
 
     // показать расклад карт
     $('.response').fadeIn('600');
+    window.scrollTo(0, document.body.scrollHeight);
     // TODO: скролл на скрин с картами
 
     $('.alignment img').click(function(event) {
-      var item = $(event.target);
-      var item_number = item.attr("data-img");
+      let item = $(event.target);
+      let item_number = item.attr("data-img");
       item_number = parseInt(item_number);
 
       // Замена изображения по клику
       // Вывод описания карты
       //FIX: медленно грузит картинки, надо подгружать втихаря
-      switch(item_number){
+      switch(item_number) {
         case 1:
           item.attr("src", junior_cards[0].image);
           $(".result-info h4").text(junior_cards[0].name);

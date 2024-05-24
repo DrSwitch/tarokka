@@ -6,6 +6,10 @@
   height: 100vh;
 }
 
+.divination {
+  margin-top: 20px;
+}
+
 .response {
   display: none;
   padding: 20px;
@@ -38,7 +42,7 @@ h1 {
 .cta {
   text-align: center;
   position: relative;
-  top: 73%;
+  top: 65%;
 }
 
 button {
@@ -105,7 +109,7 @@ button:active {
 }
 
 .result-info {
-  margin: 20px 0 20px 0;
+  margin-top: 20px;
   font-size: 1.5rem;
   background: #1f1e1f;
   padding: 10px;
